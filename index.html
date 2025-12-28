@@ -166,6 +166,21 @@
   <footer>
     <p>© 2025 CaremetEase All rights reserved.</p>
   </footer>
+<script>
+  const cards = document.querySelectorAll('.card');
+  const steps = document.querySelectorAll('.step');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => observer.observe(card));
+  steps.forEach(step => observer.observe(step));
+</script>
 
 </body>
 </html>
