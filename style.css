@@ -1,6 +1,6 @@
 /* GENERAL STYLES */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -25,7 +25,6 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: background-color 0.3s ease;
 }
 
 .navbar a {
@@ -54,25 +53,32 @@ a {
 .hero {
   text-align: center;
   padding: 120px 20px;
-  background: linear-gradient(to right, #6dd5fa, #ffffff);
-  animation: heroFade 2s ease-out;
+  background: linear-gradient(-45deg, #6dd5fa, #ffffff, #00c6ff, #f0f0f0);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
 }
 
-.hero h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeInUp 1s forwards 0.5s;
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.hero p {
-  font-size: 1.2em;
-  max-width: 600px;
-  margin: 0 auto 30px auto;
+.hero h1,
+.hero p,
+.cta-btn {
   opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeInUp 1s forwards 1s;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.hero h1 { animation-delay: 0.5s; }
+.hero p { animation-delay: 1s; }
+.cta-btn { animation-delay: 1.5s; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .cta-btn {
@@ -81,12 +87,17 @@ a {
   padding: 15px 35px;
   border-radius: 50px;
   font-weight: bold;
+  display: inline-block;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .cta-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.cta-btn:active {
+  transform: scale(0.97);
 }
 
 /* SECTIONS */
@@ -107,9 +118,9 @@ a {
 h2 {
   font-size: 2.5em;
   margin-bottom: 50px;
-  position: relative;
 }
 
+/* CARDS */
 .cards {
   display: flex;
   justify-content: center;
@@ -124,17 +135,22 @@ h2 {
   box-shadow: 0 8px 25px rgba(0,0,0,0.1);
   max-width: 300px;
   flex: 1 1 250px;
-  transform: translateY(50px);
   opacity: 0;
-  transition: transform 0.8s ease, opacity 0.8s ease;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
 }
 
 .card.visible {
-  transform: translateY(0);
   opacity: 1;
+  transform: translateY(0);
 }
 
-/* HOW IT WORKS */
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* STEPS */
 .steps {
   display: flex;
   justify-content: center;
@@ -149,14 +165,14 @@ h2 {
   width: 200px;
   text-align: center;
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  transform: scale(0.8);
   opacity: 0;
-  transition: transform 0.6s ease, opacity 0.6s ease;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
 }
 
 .step.visible {
-  transform: scale(1);
   opacity: 1;
+  transform: translateY(0);
 }
 
 .step span {
@@ -215,15 +231,24 @@ footer {
   color: #fff;
 }
 
-/* ANIMATIONS */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+/* MOBILE (VERY IMPORTANT) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
 
-@keyframes heroFade {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+  .hero h1 {
+    font-size: 2em;
+  }
 
-/* SCROLL ANIMATION TRIGGER */
+  .hero p {
+    font-size: 1em;
+  }
+
+  .cards,
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+}
