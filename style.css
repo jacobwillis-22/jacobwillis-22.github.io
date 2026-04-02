@@ -19,7 +19,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 20px 70px; /* more space for larger logo */
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: sticky;
@@ -47,6 +47,16 @@ a {
 
 .navbar a:hover::after {
   width: 100%;
+}
+
+/* LOGO */
+.logo img {
+  height: 70px;           /* bigger logo */
+  transition: transform 0.3s;
+}
+
+.logo img:hover {
+  transform: scale(1.05); /* subtle zoom on hover */
 }
 
 /* HERO */
@@ -260,8 +270,4 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-}
-
-.logo img {
-  height: 40px;
 }
