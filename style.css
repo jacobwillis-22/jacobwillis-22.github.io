@@ -111,8 +111,9 @@ a {
 }
 
 .accent {
-  background-color: #007bff;
+  background: linear-gradient(135deg, #0056b3, #007bff);
   color: #fff;
+  padding: 80px 20px;
 }
 
 h2 {
@@ -206,6 +207,14 @@ h2 {
   font-size: 1em;
 }
 
+.accent .contact-form input,
+.accent .contact-form select,
+.accent .contact-form textarea {
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
 .contact-form button {
   padding: 15px;
   border-radius: 50px;
@@ -220,7 +229,7 @@ h2 {
 
 .contact-form button:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 /* FOOTER */
@@ -231,7 +240,7 @@ footer {
   color: #fff;
 }
 
-/* MOBILE (VERY IMPORTANT) */
+/* MOBILE */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
