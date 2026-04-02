@@ -21,6 +21,7 @@
       <a href="#services">Services</a>
       <a href="#how-it-works">How It Works</a>
       <a href="#why-us">Why Us</a>
+      <a href="#quote">Request a Quote</a>
       <a href="#consultation">Schedule Consultation</a>
     </nav>
   </header>
@@ -33,11 +34,11 @@
       We help you save thousands — safely and stress-free.
     </p>
     <p style="margin-top:15px; font-size:0.95em; color:#555;">
-      ✔ Save up to 70% vs U.S. prices  
-      ✔ Licensed dentists  
+      ✔ Save up to 70% vs U.S. prices<br>
+      ✔ Licensed dentists<br>
       ✔ Safe & trusted clinics in Tijuana
     </p>
-    <a href="#consultation" class="cta-btn">Get a Free Quote</a>
+    <a href="#quote" class="cta-btn">Get a Free Quote</a>
   </section>
 
   <!-- SERVICES -->
@@ -95,10 +96,32 @@
     </div>
   </section>
 
-  <!-- SCHEDULE CONSULTATION -->
+  <!-- REQUEST A QUOTE -->
+  <section class="section light" id="quote">
+    <h2>Request a Free Quote</h2>
+    <p>Tell us about your dental needs and we’ll provide an accurate estimate.</p>
+    <form class="contact-form" action="https://formspree.io/f/mjgvegoe" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <select name="service" required>
+        <option value="">Which procedure?</option>
+        <option>Dental Implants</option>
+        <option>Crowns & Bridges</option>
+        <option>Veneers</option>
+        <option>Root Canals</option>
+        <option>Teeth Cleaning</option>
+        <option>Tooth Extractions</option>
+        <option>General Question</option>
+      </select>
+      <textarea name="details" placeholder="Tell us more about your situation" rows="4"></textarea>
+      <button type="submit">Get My Free Quote</button>
+    </form>
+  </section>
+
+  <!-- SCHEDULE GOOGLE MEET -->
   <section class="section accent" id="consultation">
-    <h2>Schedule a Free Consultation</h2>
-    <p>Talk with our team directly and get your questions answered in real time.</p>
+    <h2>Schedule a Live Consultation</h2>
+    <p>Talk with our team directly on Google Meet to discuss your dental needs in real time.</p>
     <p style="margin-top:10px; font-size:0.9em; color:#fff;">
       ✔ Real conversation with our team<br>
       ✔ No pressure<br>
@@ -110,14 +133,14 @@
       <input type="date" name="preferred_date" required />
       <input type="time" name="preferred_time" required />
       <select name="service" required>
-        <option value="">Select a Service</option>
+        <option value="">Which procedure will you discuss?</option>
         <option>Dental Implants</option>
         <option>Crowns & Bridges</option>
         <option>Veneers</option>
         <option>Root Canals</option>
         <option>Teeth Cleaning</option>
         <option>Tooth Extractions</option>
-        <option>General Question</option>
+        <option>General Questions</option>
       </select>
       <textarea name="notes" placeholder="Anything you want us to know before the call?" rows="4"></textarea>
       <button type="submit">Request Consultation</button>
