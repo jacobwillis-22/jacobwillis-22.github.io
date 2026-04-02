@@ -19,9 +19,10 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 70px; /* more space for larger logo */
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px 70px;
+  background-color: #333;  /* dark grey for logo */
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -31,6 +32,7 @@ a {
   margin-left: 20px;
   font-weight: 500;
   position: relative;
+  color: #fff; /* visible on dark bg */
 }
 
 .navbar a::after {
@@ -38,7 +40,7 @@ a {
   display: block;
   height: 2px;
   width: 0;
-  background: #007bff;
+  background: #00c6ff;
   transition: width 0.3s;
   position: absolute;
   bottom: -5px;
@@ -51,12 +53,13 @@ a {
 
 /* LOGO */
 .logo img {
-  height: 70px;           /* bigger logo */
-  transition: transform 0.3s;
+  height: 120px;  /* bigger logo */
+  transition: transform 0.3s, filter 0.3s;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
 }
 
 .logo img:hover {
-  transform: scale(1.05); /* subtle zoom on hover */
+  transform: scale(1.05);
 }
 
 /* HERO */
@@ -68,12 +71,6 @@ a {
   animation: gradientMove 15s ease infinite;
 }
 
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 .hero h1,
 .hero p,
 .cta-btn {
@@ -82,13 +79,19 @@ a {
   animation: fadeInUp 1s forwards;
 }
 
-.hero h1 { animation-delay: 0.5s; }
-.hero p { animation-delay: 1s; }
+.hero h1 { animation-delay: 0.5s; color:#0056b3; }  /* darker for contrast */
+.hero p { animation-delay: 1s; color:#333; }
 .cta-btn { animation-delay: 1.5s; }
 
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .cta-btn {
