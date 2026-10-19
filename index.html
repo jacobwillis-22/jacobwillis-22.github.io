@@ -1,175 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f7fb" />
   <title>CaremetEase | Affordable Dental Care in Tijuana</title>
   <meta name="description" content="CaremetEase helps patients access affordable dental care in Tijuana, Mexico with support for travel, hotels, and coordination." />
-
-  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="favicon.png">
-
-  <!-- CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- NAVIGATION -->
-  <header class="navbar">
-    <div class="logo">
-      <a href="#"><img src="logo.png" alt="CaremetEase Logo"></a>
-    </div>
-    <nav>
+  <header class="navbar" id="top">
+    <a class="logo" href="#top" aria-label="CaremetEase home">
+      <img src="logo.png" alt="CaremetEase" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'">
+      <span class="logo-fallback" aria-hidden="true">CaremetEase</span>
+    </a>
+    <button class="menu-toggle glass-control" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
+      <span></span><span></span>
+    </button>
+    <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
       <a href="#services">Services</a>
-      <a href="#how-it-works">How It Works</a>
-      <a href="#why-us">Why Us</a>
-      <a href="#quote">Request a Quote</a>
-      <a href="#consultation">Schedule Consultation</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#why-us">Why CaremetEase</a>
+      <a href="#quote" class="nav-cta">Get a quote <span aria-hidden="true">↗</span></a>
+      <a href="#consultation">Consultation</a>
     </nav>
+    <button class="theme-toggle glass-control" type="button" aria-label="Switch to dark mode" title="Toggle appearance">
+      <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+      <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.9 13A8.5 8.5 0 0 1 11 3.1 8.5 8.5 0 1 0 20.9 13Z"></path></svg>
+    </button>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Affordable Dental Care<br>Without Insurance</h1>
-    <p>
-      Get high-quality dental treatment in Tijuana at a fraction of U.S. prices. 
-      We help you save thousands — safely and stress-free.
-    </p>
-    <p style="margin-top:15px; font-size:0.95em; color:#555;">
-      ✔ Save up to 70% vs U.S. prices<br>
-      ✔ Licensed dentists<br>
-      ✔ Safe & trusted clinics in Tijuana
-    </p>
-    <a href="#quote" class="cta-btn">Get a Free Quote</a>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="section">
-    <h2>Dental Services</h2>
-    <p style="max-width:600px; margin:0 auto 40px; color:#555;">
-      We connect you with experienced dentists in Tijuana offering the most in-demand procedures at significantly lower costs than in the U.S.
-    </p>
-    <div class="cards">
-      <div class="card">
-        <h3>Dental Implants</h3>
-        <p>Single implants, multiple implants, and full-mouth restorations using modern techniques.</p>
+  <main id="main">
+    <section class="hero">
+      <div class="hero-orb orb-one" aria-hidden="true"></div>
+      <div class="hero-orb orb-two" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="status-dot"></span> Your smile, made more accessible</div>
+        <h1>Feel good about your smile.<br><span>And what you pay for it.</span></h1>
+        <p class="hero-copy">Explore quality dental care in Tijuana for less. We help coordinate your care, travel, and stay — so you can focus on what matters: you.</p>
+        <div class="hero-actions">
+          <a href="#quote" class="button button-primary">Get a free quote <span aria-hidden="true">↗</span></a>
+          <a href="#how-it-works" class="button button-secondary">See how it works <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="trust-row" aria-label="Our commitments">
+          <span><span class="check">✓</span> Upfront estimates</span>
+          <span><span class="check">✓</span> Dentist coordination</span>
+          <span><span class="check">✓</span> Personal support</span>
+        </div>
       </div>
-      <div class="card">
-        <h3>Crowns & Bridges</h3>
-        <p>Restore damaged or missing teeth with durable, natural-looking materials.</p>
+      <div class="hero-panel glass-panel">
+        <div class="panel-topline"><span class="panel-label">A more thoughtful way to plan care</span><span class="sparkle" aria-hidden="true">✳</span></div>
+        <div class="smile-art" aria-hidden="true">
+          <div class="smile-halo"></div>
+          <svg viewBox="0 0 320 190" role="img" aria-label="">
+            <defs><linearGradient id="toothShade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#dceaff"/></linearGradient></defs>
+            <path d="M68 43 C43 35 34 58 45 86 L69 142 C77 161 91 160 98 138 L111 101 C115 88 127 88 132 102 L146 143 C153 163 170 160 177 141 L200 83 C213 52 193 32 168 43 C151 50 140 57 124 53 C104 48 88 49 68 43Z" fill="url(#toothShade)" stroke="#fff" stroke-width="3" transform="translate(37 5) rotate(-5 140 95)"/>
+            <path d="M72 72 C100 102 149 110 201 76" fill="none" stroke="#76b8ef" stroke-width="5" stroke-linecap="round" transform="translate(18 8)"/>
+            <circle cx="250" cy="43" r="7" fill="#b8dcff"/><circle cx="57" cy="45" r="4" fill="#6fb7ef"/><path d="M256 112l5 10 11 2-8 8 2 11-10-5-10 5 2-11-8-8 11-2z" fill="#b8dcff"/>
+          </svg>
+        </div>
+        <div class="panel-bottom">
+          <div><strong>Care, with clarity.</strong><p>Understand your options before you decide.</p></div>
+          <span class="round-arrow" aria-hidden="true">↗</span>
+        </div>
       </div>
-      <div class="card">
-        <h3>Veneers</h3>
-        <p>Improve your smile with custom veneers designed for a natural appearance.</p>
+      <div class="hero-bottom-note"><span>01</span><span class="note-line"></span><span>Care that starts with a conversation</span></div>
+    </section>
+
+    <section class="intro-strip" aria-label="CaremetEase approach">
+      <p>Good care should feel clear from the very first step.</p>
+      <span>Personal guidance · Clear communication · Travel coordination</span>
+    </section>
+
+    <section id="services" class="section services-section">
+      <div class="section-heading">
+        <div><div class="eyebrow">Explore your options</div><h2>Care for your<br><span>next chapter.</span></h2></div>
+        <p>Every smile is different. Start by exploring common treatments, then talk with our team about what may fit your needs.</p>
       </div>
-      <div class="card">
-        <h3>Root Canals</h3>
-        <p>Treat infected teeth and relieve pain while preserving your natural tooth.</p>
+      <div class="cards">
+        <article class="card service-card"><div class="service-icon" aria-hidden="true">✳</div><h3>Dental implants</h3><p>Options for replacing missing teeth, from single implants to more extensive restorations.</p><a href="#quote" class="text-link">Ask about implants <span>↗</span></a></article>
+        <article class="card service-card"><div class="service-icon" aria-hidden="true">◇</div><h3>Crowns & bridges</h3><p>Restore the shape, strength, or appearance of damaged or missing teeth.</p><a href="#quote" class="text-link">Explore your options <span>↗</span></a></article>
+        <article class="card service-card"><div class="service-icon" aria-hidden="true">✧</div><h3>Veneers</h3><p>Discuss custom-made veneers designed to complement your natural smile.</p><a href="#quote" class="text-link">Ask about veneers <span>↗</span></a></article>
+        <article class="card service-card"><div class="service-icon" aria-hidden="true">⌁</div><h3>Root canals</h3><p>Learn about treatment options intended to address infection and preserve a tooth.</p><a href="#quote" class="text-link">Talk about treatment <span>↗</span></a></article>
+        <article class="card service-card"><div class="service-icon" aria-hidden="true">＋</div><h3>Tooth extractions</h3><p>Get guidance on arranging an evaluation and discussing whether removal is needed.</p><a href="#quote" class="text-link">Ask a question <span>↗</span></a></article>
+        <article class="card service-card"><div class="service-icon" aria-hidden="true">☼</div><h3>Teeth cleaning</h3><p>Find out about professional cleaning and routine oral-health care options.</p><a href="#quote" class="text-link">Explore cleaning <span>↗</span></a></article>
       </div>
-      <div class="card">
-        <h3>Tooth Extractions</h3>
-        <p>Safe removal of damaged or problematic teeth when necessary.</p>
+      <p class="disclaimer">Treatment recommendations, suitability, and final costs depend on an individual evaluation by a qualified dental professional.</p>
+    </section>
+
+    <section id="how-it-works" class="section process-section">
+      <div class="process-glow" aria-hidden="true"></div>
+      <div class="section-heading section-heading-centered"><div class="eyebrow">A little less to figure out</div><h2>One step at a time.<br><span>We’ll help with the rest.</span></h2><p>From your first question to planning your visit, we help make the process easier to navigate.</p></div>
+      <div class="steps">
+        <article class="step"><span class="step-number">01</span><div class="step-icon" aria-hidden="true">♡</div><h3>Tell us what you need</h3><p>Share the treatment you’re exploring and any questions you have.</p></article>
+        <article class="step"><span class="step-number">02</span><div class="step-icon" aria-hidden="true">⌕</div><h3>Explore care options</h3><p>We help connect you with dental providers in Tijuana to discuss your needs.</p></article>
+        <article class="step"><span class="step-number">03</span><div class="step-icon" aria-hidden="true">⌂</div><h3>Plan the details</h3><p>Get help coordinating travel and accommodation information.</p></article>
+        <article class="step"><span class="step-number">04</span><div class="step-icon" aria-hidden="true">✧</div><h3>Make an informed choice</h3><p>Review the details with your provider and decide what works for you.</p></article>
       </div>
-      <div class="card">
-        <h3>Teeth Cleaning</h3>
-        <p>Professional cleanings to maintain oral health and prevent future issues.</p>
+    </section>
+
+    <section id="why-us" class="section why-section">
+      <div class="why-visual glass-panel"><div class="why-visual-inner"><span class="visual-spark" aria-hidden="true">✳</span><p class="visual-kicker">A more human approach</p><p class="visual-quote">“You deserve to understand your options — without feeling like you have to figure it all out alone.”</p><span class="visual-caption">The CaremetEase approach</span></div></div>
+      <div class="why-copy"><div class="eyebrow">Why CaremetEase</div><h2>More clarity.<br><span>More support.</span></h2><p class="why-lede">Healthcare planning can feel overwhelming. We’re here to make the coordination feel more approachable, with clear conversations and personal guidance along the way.</p>
+        <div class="benefit"><span class="benefit-check">✓</span><div><h3>Clearer cost conversations</h3><p>Understand the estimate and ask questions before making plans. Final pricing comes from the dental provider.</p></div></div>
+        <div class="benefit"><span class="benefit-check">✓</span><div><h3>Help with the logistics</h3><p>Get support thinking through travel and accommodation coordination for a visit to Tijuana.</p></div></div>
+        <div class="benefit"><span class="benefit-check">✓</span><div><h3>A real person to talk to</h3><p>Discuss your questions with our team and take the next step at your own pace.</p></div></div>
+        <a href="#consultation" class="button button-primary">Meet with our team <span aria-hidden="true">↗</span></a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- HOW IT WORKS -->
-  <section id="how-it-works" class="section light">
-    <h2>How It Works</h2>
-    <div class="steps">
-      <div class="step"><span>1</span><p>Tell us your dental needs</p></div>
-      <div class="step"><span>2</span><p>We match you with trusted dentists in Tijuana</p></div>
-      <div class="step"><span>3</span><p>We coordinate travel and accommodations</p></div>
-      <div class="step"><span>4</span><p>You receive quality care while we handle the logistics</p></div>
-    </div>
-  </section>
+    <section class="section quote-section" id="quote">
+      <div class="quote-shell glass-panel">
+        <div class="quote-copy"><div class="eyebrow">Let’s start with a conversation</div><h2>Your questions<br>are a good <span>place to start.</span></h2><p>Tell us a little about what you’re looking for. Our team can follow up to discuss your request and possible next steps.</p><div class="quote-points"><span>✓ No-pressure conversation</span><span>✓ Share only what you’re comfortable sharing</span><span>✓ A starting point, not a commitment</span></div></div>
+        <form class="contact-form" action="https://formspree.io/f/mjgvegoe" method="POST">
+          <input type="hidden" name="form_type" value="Free quote request">
+          <label for="quote-name">Your name</label><input id="quote-name" type="text" name="name" autocomplete="name" placeholder="Full name" required>
+          <label for="quote-email">Email address</label><input id="quote-email" type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+          <label for="quote-service">What are you exploring?</label><select id="quote-service" name="service" required><option value="">Choose a treatment</option><option>Dental Implants</option><option>Crowns & Bridges</option><option>Veneers</option><option>Root Canals</option><option>Teeth Cleaning</option><option>Tooth Extractions</option><option>General Question</option></select>
+          <label for="quote-details">Anything else you’d like us to know? <span>(optional)</span></label><textarea id="quote-details" name="details" placeholder="Share any questions or details you’re comfortable sharing" rows="3"></textarea>
+          <button type="submit" class="button button-primary form-submit">Request my free quote <span aria-hidden="true">↗</span></button>
+          <p class="form-note">Please don’t include sensitive medical details in this form. Submitting a request does not establish a dentist-patient relationship.</p>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
 
-  <!-- WHY US -->
-  <section id="why-us" class="section">
-    <h2>Why Choose CaremetEase</h2>
-    <div class="cards">
-      <div class="card"><h3>Trusted Network</h3><p>We work with licensed dentists and vetted clinics in Tijuana.</p></div>
-      <div class="card"><h3>Transparent Pricing</h3><p>We help you understand costs upfront — no surprises.</p></div>
-      <div class="card"><h3>Personal Support</h3><p>We guide you every step of the way so your dental journey is stress-free.</p></div>
-    </div>
-  </section>
+    <section class="section consultation-section" id="consultation">
+      <div class="consultation-card">
+        <div class="consultation-symbol" aria-hidden="true">◷</div><div class="eyebrow">Talk it through</div><h2>Let’s make time<br>for your questions.</h2><p>Request a live consultation with our team to discuss your dental-care goals and the planning process.</p>
+        <form class="contact-form consultation-form" action="https://formspree.io/f/mjgvegoe" method="POST">
+          <input type="hidden" name="form_type" value="Consultation request">
+          <label for="consult-name">Your name</label><input id="consult-name" type="text" name="name" autocomplete="name" placeholder="Full name" required>
+          <label for="consult-email">Email address</label><input id="consult-email" type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+          <div class="date-time-row"><div><label for="consult-date">Preferred date</label><input id="consult-date" type="date" name="preferred_date" required></div><div><label for="consult-time">Preferred time</label><input id="consult-time" type="time" name="preferred_time" required></div></div>
+          <label for="consult-service">What would you like to discuss?</label><select id="consult-service" name="service" required><option value="">Choose a topic</option><option>Dental Implants</option><option>Crowns & Bridges</option><option>Veneers</option><option>Root Canals</option><option>Teeth Cleaning</option><option>Tooth Extractions</option><option>General Questions</option></select>
+          <label for="consult-notes">Notes <span>(optional)</span></label><textarea id="consult-notes" name="notes" rows="2" placeholder="Anything you’d like us to know?"></textarea>
+          <button type="submit" class="button button-primary form-submit">Request a consultation <span aria-hidden="true">↗</span></button>
+          <p class="form-note">This sends a request, not a confirmed appointment. Our team will need to follow up to coordinate a time.</p><p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-  <!-- REQUEST A QUOTE -->
-  <section class="section light" id="quote">
-    <h2>Request a Free Quote</h2>
-    <p>Tell us about your dental needs and we’ll provide an accurate estimate.</p>
-    <form class="contact-form" action="https://formspree.io/f/mjgvegoe" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <select name="service" required>
-        <option value="">Which procedure?</option>
-        <option>Dental Implants</option>
-        <option>Crowns & Bridges</option>
-        <option>Veneers</option>
-        <option>Root Canals</option>
-        <option>Teeth Cleaning</option>
-        <option>Tooth Extractions</option>
-        <option>General Question</option>
-      </select>
-      <textarea name="details" placeholder="Tell us more about your situation" rows="4"></textarea>
-      <button type="submit">Get My Free Quote</button>
-    </form>
-  </section>
+  <footer class="site-footer"><a class="footer-brand" href="#top">CaremetEase<span>®</span></a><p>Thoughtful support for your dental-care journey.</p><div class="footer-bottom"><span>© 2026 CaremetEase. All rights reserved.</span><a href="#top">Back to top ↑</a></div></footer>
 
-  <!-- SCHEDULE GOOGLE MEET -->
-  <section class="section accent" id="consultation">
-    <h2>Schedule a Live Consultation</h2>
-    <p>Talk with our team directly on Google Meet to discuss your dental needs in real time.</p>
-    <p style="margin-top:10px; font-size:0.9em; color:#fff;">
-      ✔ Real conversation with our team<br>
-      ✔ No pressure<br>
-      ✔ Free consultation
-    </p>
-    <form class="contact-form" action="https://formspree.io/f/mjgvegoe" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <input type="date" name="preferred_date" required />
-      <input type="time" name="preferred_time" required />
-      <select name="service" required>
-        <option value="">Which procedure will you discuss?</option>
-        <option>Dental Implants</option>
-        <option>Crowns & Bridges</option>
-        <option>Veneers</option>
-        <option>Root Canals</option>
-        <option>Teeth Cleaning</option>
-        <option>Tooth Extractions</option>
-        <option>General Questions</option>
-      </select>
-      <textarea name="notes" placeholder="Anything you want us to know before the call?" rows="4"></textarea>
-      <button type="submit">Request Consultation</button>
-    </form>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025-2026 CaremetEase. All rights reserved.</p>
-  </footer>
-
-  <!-- JS FOR SCROLL ANIMATION -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const observer = new IntersectionObserver((entries) => {
+    (() => {
+      const root = document.documentElement;
+      const themeButton = document.querySelector('.theme-toggle');
+      const menuButton = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.nav-links');
+      const metaTheme = document.querySelector('meta[name="theme-color"]');
+
+      const setTheme = (theme) => {
+        root.dataset.theme = theme;
+        themeButton.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+        metaTheme.setAttribute('content', theme === 'dark' ? '#101721' : '#f5f7fb');
+        try { localStorage.setItem('caremetease-theme', theme); } catch (_) {}
+      };
+      try {
+        const saved = localStorage.getItem('caremetease-theme');
+        setTheme(saved === 'dark' || saved === 'light' ? saved : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+      } catch (_) { setTheme('light'); }
+      themeButton.addEventListener('click', () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
+
+      menuButton.addEventListener('click', () => {
+        const open = menuButton.getAttribute('aria-expanded') !== 'true';
+        menuButton.setAttribute('aria-expanded', String(open));
+        menuButton.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+        nav.classList.toggle('is-open', open);
+        root.classList.toggle('menu-open', open);
+      });
+      nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open navigation menu');
+        root.classList.remove('menu-open');
+      }));
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+          nav.classList.remove('is-open');
+          menuButton.setAttribute('aria-expanded', 'false');
+          menuButton.setAttribute('aria-label', 'Open navigation menu');
+          root.classList.remove('menu-open');
+        }
+      });
+
+      const revealObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
         entries.forEach(entry => {
-          if(entry.isIntersecting) {
+          if (entry.isIntersecting) {
             entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.2 });
+      }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' }) : null;
+      document.querySelectorAll('.card, .step, .benefit').forEach(el => {
+        if (revealObserver) revealObserver.observe(el);
+        else el.classList.add('visible');
+      });
 
-      document.querySelectorAll('.card, .step').forEach(el => observer.observe(el));
-    });
+      document.querySelectorAll('.contact-form').forEach(form => {
+        form.addEventListener('submit', () => {
+          const button = form.querySelector('button[type="submit"]');
+          if (button) {
+            button.disabled = true;
+            button.dataset.originalText = button.textContent;
+            button.textContent = 'Sending request…';
+          }
+        });
+      });
+
+      const dateInput = document.querySelector('#consult-date');
+      if (dateInput) {
+        const today = new Date();
+        const localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+        dateInput.min = localDate;
+      }
+    })();
   </script>
-
 </body>
 </html>
